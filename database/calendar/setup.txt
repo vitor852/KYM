@@ -1,0 +1,3 @@
+marcar (dentista) dia (15)
+marcar (medico) para dia (19)
+marcar (evento) em (15 dias)
