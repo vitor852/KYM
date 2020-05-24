@@ -2,13 +2,13 @@ from functions.microphone import listen_microphone
 from kym import Kym
 from sentence import Sentence
 
+import sys
 import os
 
-training_data_path = "/home/vitor/Documentos/projetos/kym/src/database/"
-test_data_path = os.path.join("/home/vitor/Documentos/projetos/kym/src/test.txt")
+training_data_path = "C:/Users/vitor/Documents/KYM/src/database/"
+test_data_path = "C:/Users/vitor/Documents/KYM/src/test.txt"
 
 kym = Kym(training_data_path)
-kym.init()
 
 def load_test_data():
     test_data = []
@@ -23,10 +23,15 @@ def load_test_data():
 
 
 if __name__ == "__main__":
-    for test in load_test_data():
-        # sentence = listen_microphone()
-        # sentence = Sentence(sentence)
+    resp = None
 
-        sentence = Sentence(test)
+    if(sys.argv[1]):
+        resp = kym.handle_sentence(sys.argv[1])
+        print(resp)
+    else:
+        for test in load_test_data():
+            # sentence = listen_microphone()
+            # sentence = Sentence(sentence)
 
-        print(f"{Sentence.better_class}\n")
+            resp = kym.handle_sentence(test)
+            print(resp)

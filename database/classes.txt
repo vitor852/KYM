@@ -1,6 +1,4 @@
 calendar
-map
-music
 search
 shutdown
 shutdownWithTime

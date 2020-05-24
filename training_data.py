@@ -9,6 +9,8 @@ from nltk.stem.snowball import SnowballStemmer
     # Tratar os dados para treinamento
 """
 
+# Implementar erro caso diretorio recebido não seja valido
+
 stemmer = SnowballStemmer(language="portuguese")
 
 class TrainingData():
@@ -29,7 +31,7 @@ class TrainingData():
     def __load_classes(self):
         file = File(self.path + 'classes.txt')
 
-        for class_path in file.get_lines():
+        for class_path in file.read_file():
             temp = path.join(self.path, class_path)
 
             for class_name in os.listdir(temp):
@@ -40,7 +42,7 @@ class TrainingData():
 
     def __load_data(self):
         for file in self.classes:
-            for line in file.get_lines():
+            for line in file.read_file():
                 if(line):
                     sentence = line.strip()
                     self.train_data.append({"class":file.name, "sentence":sentence})
@@ -54,7 +56,7 @@ class TrainingData():
         for data in self.train_data:
             sentence = nltk.word_tokenize(data['sentence'])
 
-            for index, word in enumerate(sentence):
+            for _, word in enumerate(sentence):
                 if(word not in '()'):
                     stemmed_word = stemmer.stem(word.lower())
 

@@ -14,7 +14,7 @@ class File:
 
         self.file = file
         
-        self.lines = []
+        self.content = []
 
         self.__get_content()
 
@@ -22,12 +22,15 @@ class File:
         try:
             with open(self.file) as file:
                 for line in file:
-                    self.lines.append(line.strip())
+                    self.content.append(line.strip())
         except:
             pass
 
-    def get_lines(self):
-        return self.lines
+    def read_file(self):
+        """
+            return file content
+        """
+        return self.content
 
     def __str__(self):
         return self.file
