@@ -1,9 +1,15 @@
-desligar computador
-desligar computador as 10 horas
-desligar computador daqui 5 minutos
-
-o que é caneca
-procurar sobre caneca
-procurar sobre celular
-procurar no google por alecrim
-procurar no youtube por quarto
+sentences,labels
+desligar computador,turnoff
+desligar computador as 10 horas,turnoffwtime
+desligar computador daqui 5 minutos,turnoffwtime
+o que é caneca,search
+procurar sobre teclado,search
+procurar sobre celular,search
+procurar no google por alecrim,search
+procurar no youtube por quarto,search
+marcar dentista dia 29,setup
+tocar alguma musica,playMusic
+proxima musica,nextMusic
+tocar quarto do sidoka,playMusic
+voltar para o inicio da musica,prevMusic
+procurar sobre monitor e abrir pagina,searchAndOpen

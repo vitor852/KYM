@@ -1,0 +1,26 @@
+sentences,labels,arguments
+marcar dentista dia 15,setup,dentista;15
+marcar medico para dia 19,setup,medico;19
+marcar evento em 14 dias,setup,evento;14
+procurar por eletricidade,search,eletricidade
+o que é celular,search,celular
+pesquisar por monitores,search,monitores
+como fazer comida,search,comida
+procurar sobre obama,search,obama
+pesquisar no youtube por musica,search,youtube;musica
+reiniciar computador,restart
+desligar computador,turnoff
+desligar computador em 15 minutos,turnoffwtime,15
+desligar computador em 10 horas,turnoffwtime,10
+desligar computador em 15 segundos,turnoffwtime,15
+tocar musica,playMusic
+tocar alguma musica,playMusic
+proxima musica,nextMusic
+passar musica,nextMusic
+retroceder musica,prevMusic
+musica anterior,prevMusic
+voltar musica,prevMusic
+voltar para o inicio da musica,prevMusic
+pausar musica,pauseMusic
+parar musica,pauseMusic
+procurar sobre obama e abrir a pagina,searchAndOpen,obama

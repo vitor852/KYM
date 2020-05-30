@@ -1,4 +1,0 @@
-calendar
-search
-shutdown
-shutdownWithTime
